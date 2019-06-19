@@ -1,0 +1,9 @@
+
+
+
+Options +FollowSymLinks
+  RewriteEngine On
+RewriteCond %{THE_REQUEST} ^[A-Z]{3,9}\ /index\.php\ HTTP
+RewriteRule ^index\.php$ http://urucca.by/ [R=301,L]
+RewriteCond %{HTTP_HOST} ^www.urucca\.by$ [NC]
+RewriteRule ^(.*)$ http://urucca.by/$1 [R=301,L]
